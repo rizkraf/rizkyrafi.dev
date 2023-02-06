@@ -9,7 +9,7 @@ export default defineNuxtConfig({
 
   googleFonts: {
     families: {
-      Lato: true,
+      Montserrat: true,
     },
   },
 });
