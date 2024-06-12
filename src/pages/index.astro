@@ -1,9 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.jsx';
-import Main from '../components/main/index.jsx';
+import Main from '../components/main/index.tsx';
+import '@/styles/globals.css';
 ---
 
 <Layout title="Rizky Rafi">
-	<Main />
+  <Main client:load />
 </Layout>
