@@ -1,10 +1,15 @@
+import Links from "@/components/links";
+
 const Main = () => {
   return (
-    <main className="flex flex-col justify-center items-center gap-2">
-      <h1 className="text-black text-5xl text-center font-bold">
-        This Website is Under Development.
-      </h1>
-    </main>
+    <div className="font-base">
+      <h1 className="text-2xl font-heading sm:text-4xl">Rizky Rafi Azhara</h1>
+      <p className="mt-2 text-lg sm:text-xl">Software Engineer</p>
+      <div className="mt-8 text-base sm:text-lg">
+        <p>Hi, my name is Rizky Rafi Azhara, software engineer based in Bandung.</p>
+      </div>
+      <Links />
+    </div>
   );
 };
 

@@ -1,3 +1,5 @@
+import defaultTheme from 'tailwindcss/defaultTheme'
+
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: ['class'],
@@ -24,6 +26,9 @@ export default {
       fontWeight: {
         base: '500',
         heading: '700',
+      },
+      fontFamily: {
+        montserrat: ['Montserrat', ...defaultTheme.fontFamily.sans],
       },
     },
   },
