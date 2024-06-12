@@ -1,26 +1,39 @@
-import React, { useState } from "react";
-import hamburgerMenu from "../assets/hamburger_menu.svg";
-import closeMenu from "../assets/close_menu.svg";
+import clsx from 'clsx';
 
-const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const handleMenuClick = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const menuIcon = isMenuOpen ? closeMenu.src : hamburgerMenu.src;
+export default function Nav({ path }: Readonly<{ path: string }>) {
+  const links = [
+    {
+      path: '/',
+      text: 'Home',
+    },
+    {
+      path: '/about',
+      text: 'About',
+    },
+    {
+      path: '/work',
+      text: 'Work',
+    },
+  ];
 
   return (
-    <header>
-      <nav className="p-4 flex justify-between items-center">
-        <h5 className="font-bold text-xl text-black">Rizky Rafi</h5>
-        <button onClick={handleMenuClick}>
-          <img src={menuIcon} alt="hamburger-menu" />
-        </button>
+    <div className="fixed left-0 top-5 z-50 w-full">
+      <nav className="mx-auto flex w-max gap-5 rounded-base border-2 border-black bg-main p-2.5 px-5 text-sm font-base shadow-base sm:text-base">
+        {links.map((link) => {
+          return (
+            <a
+              key={link.path}
+              className={clsx(
+                'rounded-base border-2 px-2 py-1 transition-colors hover:border-black',
+                path === link.path ? 'border-black' : 'border-transparent'
+              )}
+              href={link.path}
+            >
+              {link.text}
+            </a>
+          );
+        })}
       </nav>
-    </header>
+    </div>
   );
-};
-
-export default Header;
+}
