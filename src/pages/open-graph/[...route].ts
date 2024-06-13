@@ -28,5 +28,15 @@ export const { getStaticPaths, GET } = OGImageRoute({
     title: page.title,
     description: page.description,
     bgGradient: [[223, 229, 242]],
+    font: {
+      title: {
+        families: ['Inter'],
+        color: [0, 0, 0],
+      },
+      description: {
+        families: ['Inter'],
+        color: [0, 0, 0],
+      }
+    }
   }),
 });
