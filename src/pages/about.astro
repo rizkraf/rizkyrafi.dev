@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import '@/styles/globals.css';
 import Skills from '@/components/sections/skills.tsx';
+import Experience from '@/components/sections/experience.tsx';
 ---
 
 <Layout title="Rizky Rafi">
@@ -16,5 +17,6 @@ import Skills from '@/components/sections/skills.tsx';
       </p>
     </div>
     <Skills client:load />
+    <Experience client:load />
   </div>
 </Layout>
