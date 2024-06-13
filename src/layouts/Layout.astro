@@ -9,6 +9,7 @@ import Header from '@/components/Header.tsx';
 const url = new URL(Astro.request.url);
 const pathname = url.pathname;
 import '@fontsource/montserrat';
+import { ViewTransitions } from 'astro:transitions';
 ---
 
 <!doctype html>
@@ -20,6 +21,7 @@ import '@fontsource/montserrat';
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
   <body class='font-montserrat'>
     <Header client:load path={pathname} />
