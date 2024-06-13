@@ -7,11 +7,11 @@ export default function Nav({ path }: Readonly<{ path: string }>) {
       text: 'Home',
     },
     {
-      path: '/about',
+      path: '/about/',
       text: 'About',
     },
     {
-      path: '/work',
+      path: '/work/',
       text: 'Work',
     },
   ];
