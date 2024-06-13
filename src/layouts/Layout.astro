@@ -11,7 +11,7 @@ const pathname = url.pathname;
 import '@fontsource/montserrat';
 import { ViewTransitions } from 'astro:transitions';
 import { SEO } from 'astro-seo';
-const ogImage = `${Astro.site?.origin}/open-graph/${pathname.split('/').pop()}.png`;
+const ogImage = `${Astro.site?.origin}/open-graph/${pathname.split('/')[1]}.png`;
 ---
 
 <!doctype html>
