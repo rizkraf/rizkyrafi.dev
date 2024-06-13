@@ -11,5 +11,8 @@ export default defineConfig({
     }),
     react(),
   ],
-  trailingSlash: 'always'
+  trailingSlash: 'always',
+  prefetch: {
+    prefetchAll: true,
+  },
 });
