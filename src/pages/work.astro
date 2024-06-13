@@ -1,14 +1,60 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import '@/styles/globals.css';
-import Projects from '@/components/sections/project.tsx'
+import PROJECTS from '@/data/projects';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { Image } from 'astro:assets';
 ---
 
 <Layout title="Rizky Rafi">
   <div>
     <h1 class="mb-8 text-2xl font-heading sm:text-4xl">Work</h1>
     <div class="flex flex-col gap-5">
-      <Projects client:load />'
+      {
+        PROJECTS.map((project) => {
+          return (
+            <div class="rounded-base border-2 border-black bg-main p-4 shadow-base sm:p-5">
+              <AspectRatio
+                className="!-bottom-[2px] rounded-base border-2 border-black shadow-base"
+                ratio={16 / 9}
+              >
+                <Image
+                  class="w-full h-full rounded-base"
+                  src={`${project.previewImage}`}
+                  alt={project.name}
+                  width="100"
+                  height="100"
+                  format="webp"
+                  loading="eager"
+                />
+              </AspectRatio>
+
+              <div class="mt-5 font-base">
+                <h2 class="text-xl font-heading sm:text-2xl">{project.name}</h2>
+
+                <p class="mt-2">{project.description}</p>
+
+                <div class="mt-8 grid grid-cols-2 gap-5">
+                  <a
+                    class="cursor-pointer rounded-base border-2 border-black bg-white px-4 py-2 text-center text-sm font-base shadow-base transition-all hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none sm:text-base"
+                    href={project.liveLink}
+                    target="_blank"
+                  >
+                    Visit
+                  </a>
+                  <a
+                    class="cursor-pointer rounded-base border-2 border-black bg-white px-4 py-2 text-center text-sm font-base shadow-base transition-all hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none sm:text-base"
+                    href={project.repoUrl}
+                    target="_blank"
+                  >
+                    Github
+                  </a>
+                </div>
+              </div>
+            </div>
+          );
+        })
+      }
     </div>
   </div>
 </Layout>
