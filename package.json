@@ -16,6 +16,7 @@
     "@astrojs/ts-plugin": "^1.8.0",
     "@fontsource/montserrat": "^5.0.18",
     "@icons-pack/react-simple-icons": "^9.5.0",
+    "@radix-ui/react-aspect-ratio": "^1.0.3",
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-tooltip": "^1.0.7",
     "@types/react": "^18.3.3",
