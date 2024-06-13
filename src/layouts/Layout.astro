@@ -10,21 +10,58 @@ const url = new URL(Astro.request.url);
 const pathname = url.pathname;
 import '@fontsource/montserrat';
 import { ViewTransitions } from 'astro:transitions';
+import { SEO } from 'astro-seo';
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <SEO
+      title={title}
+      description="My personal website."
+      openGraph={{
+        basic: {
+          title: title,
+          type: 'Website',
+          image:
+            'https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png',
+        },
+      }}
+      extend={{
+        link: [
+          { rel: 'icon', href: '/favicon.ico' },
+          { rel: 'sitemap', href: '/sitemap-index.xml' },
+        ],
+        meta: [
+          {
+            name: 'charset',
+            content: 'UTF-8',
+          },
+          {
+            name: 'description',
+            content: 'My personal website.',
+          },
+          {
+            name: 'viewport',
+            content: 'width=device-width',
+          },
+          {
+            name: 'generator',
+            content: Astro.generator,
+          },
+          {
+            name: 'twitter:image',
+            content:
+              'https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png',
+          },
+          { name: 'twitter:title', content: title },
+          { name: 'twitter:description', content: 'My Personal Website' },
+        ],
+      }}
+    />
     <ViewTransitions />
   </head>
-  <body class='font-montserrat'>
+  <body class="font-montserrat">
     <Header client:load path={pathname} />
     <div class="mx-auto w-[750px] max-w-full px-5 pb-10 pt-28">
       <slot />

@@ -44,6 +44,9 @@ dependencies:
   astro:
     specifier: ^4.5.5
     version: 4.5.5(typescript@5.4.2)
+  astro-seo:
+    specifier: ^0.8.4
+    version: 0.8.4(typescript@5.4.2)
   class-variance-authority:
     specifier: ^0.7.0
     version: 0.7.0
@@ -1808,6 +1811,16 @@ packages:
 
   /array-iterate@2.0.1:
     resolution: {integrity: sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==}
+    dev: false
+
+  /astro-seo@0.8.4(typescript@5.4.2):
+    resolution: {integrity: sha512-Ou1vzQSXAxa0K8rtNtXNvSpYqOGEgMhh0immMxJeXmbVZac3UKCNWAoXWyOQDFYsZvBugCRSg0N1phBqPMVgCw==}
+    dependencies:
+      '@astrojs/check': 0.5.9(typescript@5.4.2)
+    transitivePeerDependencies:
+      - prettier
+      - prettier-plugin-astro
+      - typescript
     dev: false
 
   /astro@4.5.5(typescript@5.4.2):
