@@ -9,15 +9,15 @@ export const { getStaticPaths, GET } = OGImageRoute({
   // The keys of this object are used to generate the path for that image.
   // In this example, we generate one image at `/open-graph/example.png`.
   pages: {
-   '': {
-     title: 'Home - Rizky Rafi',
-     description: 'This is my Home page',
+    '': {
+      title: 'Home - Rizky Rafi',
+      description: 'This is my Home page',
     },
-    'work': {
+    work: {
       title: 'Work - Rizky Rafi',
       description: 'This is my Work page',
     },
-    'about': {
+    about: {
       title: 'About - Rizky Rafi',
       description: 'This is my About page',
     },
@@ -27,5 +27,6 @@ export const { getStaticPaths, GET } = OGImageRoute({
   getImageOptions: (path, page) => ({
     title: page.title,
     description: page.description,
+    bgGradient: [[223, 229, 242]],
   }),
 });
