@@ -9,7 +9,7 @@ export const { getStaticPaths, GET } = OGImageRoute({
   // The keys of this object are used to generate the path for that image.
   // In this example, we generate one image at `/open-graph/example.png`.
   pages: {
-   'index': {
+   '': {
      title: 'Home - Rizky Rafi',
      description: 'This is my Home page',
     },
