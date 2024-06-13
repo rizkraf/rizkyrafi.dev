@@ -23,14 +23,14 @@ const ogImage = `${Astro.site?.origin}/open-graph/${pathname.split('/')[1]}.png`
       openGraph={{
         basic: {
           title: title,
-          type: 'Website',
+          type: 'website',
           image:
             ogImage,
         },
       }}
       extend={{
         link: [
-          { rel: 'icon', href: '/favicon.ico' },
+          { rel: 'icon', href: '/favicon.svg' },
           { rel: 'sitemap', href: '/sitemap-index.xml' },
         ],
         meta: [
@@ -50,13 +50,54 @@ const ogImage = `${Astro.site?.origin}/open-graph/${pathname.split('/')[1]}.png`
             name: 'generator',
             content: Astro.generator,
           },
+          // Facebook
+          {
+            name: 'og:url',
+            content: Astro.site?.origin,
+          },
+          {
+            name: 'og:type',
+            content: 'website',
+          },
+          {
+            name: 'og:title',
+            content: title,
+          },
+          {
+            name: 'og:image',
+            content:
+            ogImage,
+          },
+          {
+            name: 'og:description',
+            content: 'My Personal Website',
+          },
+          // Twitter
+          {
+            name: 'twitter:card',
+            content: 'summary_large_image',
+          },
+          {
+            name: 'twitter:domain',
+            content: Astro.site?.hostname,
+          },
+          {
+            name: 'twitter:url',
+            content: Astro.site?.origin,
+          },
+          {
+            name: 'twitter:title',
+            content: title,
+          },
+          {
+            name: 'twitter:description',
+            content: 'My Personal Website',
+          },
           {
             name: 'twitter:image',
             content:
             ogImage,
           },
-          { name: 'twitter:title', content: title },
-          { name: 'twitter:description', content: 'My Personal Website' },
         ],
       }}
     />
