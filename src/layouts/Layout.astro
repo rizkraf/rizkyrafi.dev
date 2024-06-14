@@ -12,6 +12,7 @@ import '@fontsource/montserrat';
 import { ViewTransitions } from 'astro:transitions';
 import { SEO } from 'astro-seo';
 const ogImage = `${Astro.site?.origin}/og/${pathname.split('/')[1]}.png`;
+import  SpeedInsights  from "@vercel/speed-insights/astro"
 ---
 
 <!doctype html>
@@ -102,6 +103,7 @@ const ogImage = `${Astro.site?.origin}/og/${pathname.split('/')[1]}.png`;
       }}
     />
     <ViewTransitions />
+    <SpeedInsights />
   </head>
   <body class="font-montserrat">
     <Header client:load path={pathname} />
