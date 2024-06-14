@@ -36,7 +36,12 @@ export const { getStaticPaths, GET } = OGImageRoute({
       description: {
         families: ['Inter'],
         color: [0, 0, 0],
-      }
-    }
+      },
+    },
+    border: {
+      color: [136, 170, 238],
+      width: 20,
+      side: 'inline-start',
+    },
   }),
 });
