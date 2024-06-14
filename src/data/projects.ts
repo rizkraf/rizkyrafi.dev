@@ -1,7 +1,13 @@
+import quranWeb from '../assets/Quran-Web.png'
+import noter from '../assets/Noter.png'
+import bookshelf from '../assets/Bookshelf.png'
+import spense from '../assets/Spense.png'
+import pong from '../assets/Pong.png'
+
 const PROJECTS: {
   name: string
   description: string
-  previewImage: string
+  previewImage: ImageMetadata
   repoUrl: string
   liveLink: string
 }[] = [
@@ -9,35 +15,35 @@ const PROJECTS: {
     name: 'Quran Web',
     description: 'Lorem ipsum dolor sit amet',
     liveLink: 'https://quran.rizkyrafi.id/',
-    previewImage: '/Quran-Web.png',
+    previewImage: quranWeb,
     repoUrl: 'https://github.com/rizkraf/quran-web',
   },
   {
     name: 'Noter',
     description: 'Lorem ipsum dolor sit amet',
     liveLink: 'https://noter.rizkyrafi.id/',
-    previewImage: '/Noter.png',
+    previewImage: noter,
     repoUrl: 'https://github.com/rizkraf/noter',
   },
   {
     name: 'Bookshelf',
     description: 'Lorem ipsum dolor sit amet',
     liveLink: 'https://bookshelf-website.netlify.app/',
-    previewImage: '/Bookshelf.png',
+    previewImage: bookshelf,
     repoUrl: 'https://github.com/rizkraf/bookshelf-apps',
   },
   {
     name: 'Spense',
     description: 'Lorem ipsum dolor sit amet',
     liveLink: 'https://spense-web.netlify.app/',
-    previewImage: '/Spense.png',
+    previewImage: spense,
     repoUrl: 'https://github.com/rizkraf/spense',
     },
     {
       name: 'Pong Game',
       description: 'Lorem ipsum dolor sit amet',
       liveLink: '/',
-      previewImage: '/Pong.png',
+      previewImage: pong,
       repoUrl: 'https://github.com/rizkraf/Rizky_Rafi_Azhara-Pong',
     },
 ]
