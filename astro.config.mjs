@@ -15,9 +15,7 @@ export default defineConfig({
     }),
     react(),
     sitemap(),
-    playformInline({
-      Critters: false
-    }),
+    (await import('@playform/inline')).default(),
   ],
   trailingSlash: 'always',
   prefetch: {
