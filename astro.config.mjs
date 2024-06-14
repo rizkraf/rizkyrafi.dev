@@ -20,7 +20,5 @@ export default defineConfig({
     prefetchAll: true,
   },
   output: 'static',
-  adapter: vercel({
-    imageService: true,
-  }),
+  adapter: vercel(),
 });
